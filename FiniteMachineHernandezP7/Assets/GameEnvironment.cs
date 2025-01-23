@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using UnityEngine;
 
 public class GameEnviorment
@@ -18,6 +19,8 @@ public class GameEnviorment
                 instance = new GameEnviorment();
                 instance.checkpoints.AddRange(
                     GameObject.FindGameObjectsWithTag("Checkpoint"));
+
+                instance.checkpoints = instance.checkpoints.OrderBy(waypoint => waypoint.name).ToList();
             }
             return instance;
         }
