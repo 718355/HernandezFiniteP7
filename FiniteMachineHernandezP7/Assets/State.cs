@@ -28,7 +28,7 @@ public class State
 
     float visDist = 10.0f;
     float visAngle = 30.0f;
-    float shootDist = 10.0f;
+    float shootDist = 7.0f;
 
     public State(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
     {
